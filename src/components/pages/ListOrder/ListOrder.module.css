@@ -1,0 +1,29 @@
+.order {
+  padding: 16px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.button {
+  display: flex;
+  gap: 10px;
+}
+
+.table {
+  text-align: center;
+  width: 100%;
+}
+
+.thead {
+  background-color: #d3d3d3;
+}
+
+.action {
+  display: flex;
+  gap: 10px;
+}
