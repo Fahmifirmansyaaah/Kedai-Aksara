@@ -1,7 +1,19 @@
+interface Imenu {
+  id: string;
+  name: string;
+  description: string;
+  price: number;
+  image_url: string;
+  category: string;
+  isAvailable: string;
+}
+
 interface Icart {
-  menuId: string;
+  id?: string;
+  menuId?: string;
   quantity: number;
   notes: string;
+  menuItem?: Imenu;
 }
 
 interface Iorder {

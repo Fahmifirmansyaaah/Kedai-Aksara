@@ -3,6 +3,8 @@ import Home from "../components/pages/Home";
 import Login from "../components/pages/Login";
 import ProtectedRoute from "./ProtectedRoute";
 import ListOrder from "../components/pages/ListOrder";
+import DetailOrder from "../components/pages/DetailOrder";
+import CreateOrder from "../components/pages/CreateOrder";
 
 const routes: RouteObject[] = [
   {
@@ -22,6 +24,22 @@ const routes: RouteObject[] = [
     element: (
       <ProtectedRoute>
         <ListOrder />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/orders/:id",
+    element: (
+      <ProtectedRoute>
+        <DetailOrder />
+      </ProtectedRoute>
+    ),
+  },
+  {
+    path: "/create",
+    element: (
+      <ProtectedRoute>
+        <CreateOrder />
       </ProtectedRoute>
     ),
   },
