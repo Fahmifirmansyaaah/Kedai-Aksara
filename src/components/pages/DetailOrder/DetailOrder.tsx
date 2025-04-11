@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
-import { Icart, Iorder } from "../../../types/order";
+import { Iorder } from "../../../types/order";
 import { getOrderById } from "../../../services/order.service";
 import styles from "./DetailOrder.module.css";
 import Button from "../../ui/Button";

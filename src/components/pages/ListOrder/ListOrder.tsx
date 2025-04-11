@@ -2,9 +2,8 @@ import { useEffect, useState } from "react";
 import { getOrders, UpdateOrder } from "../../../services/order.service";
 import styles from "./ListOrder.module.css";
 import Button from "../../ui/Button";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Iorder } from "../../../types/order";
-import { removeLocalStorage } from "../../../utils/storage";
 import Sidebar from "../../ui/Sidebar";
 
 const ListOrder = () => {
