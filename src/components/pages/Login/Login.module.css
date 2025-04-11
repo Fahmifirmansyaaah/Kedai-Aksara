@@ -1,3 +1,7 @@
+* {
+  background-color: #fdf9f4;
+}
+
 .login {
   display: flex;
   justify-content: center;

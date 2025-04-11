@@ -2,11 +2,13 @@ import { useEffect, useState } from "react";
 import { getOrders, UpdateOrder } from "../../../services/order.service";
 import styles from "./ListOrder.module.css";
 import Button from "../../ui/Button";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Iorder } from "../../../types/order";
+import { removeLocalStorage } from "../../../utils/storage";
+import Sidebar from "../../ui/Sidebar";
 
 const ListOrder = () => {
-  const [orders, setOrders] = useState([]);
+  const [orders, setOrders] = useState<Iorder[]>([]);
   const [refetchOrder, setRefetchOrder] = useState(true);
 
   useEffect(() => {
@@ -28,13 +30,13 @@ const ListOrder = () => {
 
   return (
     <main className={styles.order}>
+      <Sidebar />
       <section className={styles.header}>
         <h1 className={styles.title}>Order List</h1>
         <div className={styles.button}>
           <Link to="/create">
             <Button>Create Order</Button>
           </Link>
-          <Button color="secondary">Logout</Button>
         </div>
       </section>
       <section>
@@ -50,7 +52,7 @@ const ListOrder = () => {
             </tr>
           </thead>
           <tbody>
-            {orders.map((order: Iorder, index: number) => (
+            {orders?.map((order: Iorder, index: number) => (
               <tr key={order.id}>
                 <td>{index + 1}</td>
                 <td>{order.customer_name}</td>
@@ -59,7 +61,7 @@ const ListOrder = () => {
                 <td>{order.status}</td>
                 <td className={styles.action}>
                   <Link to={`/orders/${order.id}`}>
-                    <Button>Detail</Button>
+                    <Button color="secondary">Detail</Button>
                   </Link>
                   {order.status === "PROCESSING" && <Button onClick={() => handleCompleteOrder(order.id)}>Completed</Button>}
                 </td>

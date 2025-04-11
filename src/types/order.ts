@@ -9,11 +9,11 @@ interface Imenu {
 }
 
 interface Icart {
-  id?: string;
   menuId?: string;
   quantity: number;
-  notes: string;
+  notes?: string;
   menuItem?: Imenu;
+  name?: string;
 }
 
 interface Iorder {
@@ -25,4 +25,4 @@ interface Iorder {
   total: number;
 }
 
-export type { Iorder, Icart };
+export type { Iorder, Icart, Imenu };

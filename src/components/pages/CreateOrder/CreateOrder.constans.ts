@@ -1,4 +1,4 @@
-const filters = ["All", "Coffe", "Non-coffe", "Pastries", "Desserts", "Sandwiches"];
+const filters = ["All", "Coffee", "Non-Coffee", "Pastries", "Desserts", "Sandwiches"];
 
 const tables = [
   { value: "1", label: "1" },

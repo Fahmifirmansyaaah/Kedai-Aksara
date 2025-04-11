@@ -25,8 +25,8 @@ const Login = () => {
       <div className={styles.card}>
         <h1 className={styles.title}>Login</h1>
         <form className={styles.form} onSubmit={handleLogin}>
-          <Input label="email" name="email" id="email" type="email" placeholder="Masukkan Email Anda" required />
-          <Input label="password" name="password" id="password" type="password" placeholder="Masukkan password Anda" required />
+          <Input label="Email" name="email" id="email" type="email" placeholder="Masukkan Email Anda" required />
+          <Input label="Password" name="password" id="password" type="password" placeholder="Masukkan password Anda" required />
           <Button type="submit">Login</Button>
         </form>
       </div>
